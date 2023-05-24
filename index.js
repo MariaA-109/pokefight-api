@@ -14,6 +14,12 @@ const PORT = process.env.PORT || 8080;
 //  })
 //);
 
-//app.use("/");
+const pokemonRouter = require("./Routes/pokemon");
+
+
+app.use("/",pokemonRouter);
+app.get("/",(req, res) => {
+    res.send("<h1>Check out our pokemon!</h1>");
+});
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
