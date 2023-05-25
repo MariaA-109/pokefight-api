@@ -11,10 +11,7 @@ db();
 app.use(express.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors()
-  // {methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],}
-);
+app.use(cors());
 
 const pokemonRouter = require("./Routes/pokemon");
 
