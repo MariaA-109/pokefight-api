@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const { Schema } = mongoose;
+//const mongoose = require("mongoose");
+//const { Schema } = mongoose;
 
-const Pokemon = new Schema();
+//const Pokemon = new Schema();
 
-module.exports = mongoose.model("Pokemon", Pokemon);
+//module.exports = mongoose.model("Pokemon", Pokemon);
