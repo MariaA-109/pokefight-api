@@ -14,8 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 const pokemonRouter = require("./Routes/pokemon");
+const scoreRouter = require("./Routes/score")
 
-app.use("/", pokemonRouter);
+app.use("/", pokemonRouter, scoreRouter);
 app.get("/", (req, res) => {
   res.send("<h1>Check out our pokemon!</h1>");
 });
