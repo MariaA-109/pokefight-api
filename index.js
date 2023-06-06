@@ -2,11 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
-//const db = require("./db");
+const db = require("./db");
 
 const PORT = process.env.PORT || 8080;
 
-//db();
+db();
 
 app.use(express.json());
 app.use(express.json());
@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 const pokemonRouter = require("./Routes/pokemon");
-const scoreRouter = require("./Routes/score")
+const scoreRouter = require("./Routes/score");
 
 app.use("/", pokemonRouter, scoreRouter);
 app.get("/", (req, res) => {
